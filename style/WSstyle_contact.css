@@ -1,0 +1,89 @@
+/***** GENERAL - PAGE EN COURS D'AFFICHAGE *****/
+#pageActuelle a {
+    text-decoration: underline;
+}
+/***** GENERAL - TEXTES *****/
+
+.texteContact {
+    border-top: 2px solid rgb(63, 61, 61);
+    padding: 30px 0px 30px 0px;
+}
+
+.texteContact h2 {
+    color:rgba(0, 96, 88, 1);
+    font-size: 2rem;
+}
+.texteContact h3 {
+    font-size: 1.3rem;
+    color: rgb(90, 90, 90);
+    padding-bottom: 15px;
+}
+
+.texteContact p {
+    font-size: 1rem;
+    color: rgb(90, 90, 90);
+}
+
+.formulaire p {
+    font-size: 1.1rem;
+    color: rgb(90, 90, 90);
+}
+/***** FORMULAIRE DE CONTACT *****/
+
+.formulaire {
+    border-color: rgba(0, 96, 88, 1);
+    padding: 20px 20px 20px 20px;     
+    border-radius : 10px;
+}
+
+
+.formulaire input {
+    border-radius : 5px;
+    font-size: 1.1rem;
+    color: rgb(207, 207, 207);
+}
+
+.formulaire div {
+    margin-bottom: 30px;
+}
+
+.nomPrenom {
+    display: flex;
+    flex-direction: row;
+    
+}
+.nomPrenom input {
+    margin-right: 10%;
+}
+
+
+.message {
+    display: flex ;
+    flex-direction: column;
+    
+}
+.message textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    color: rgb(207, 207, 207);
+    
+}
+
+.buttonSend {
+    display:flex; 
+    justify-content: flex-end;
+}
+.buttonSend input {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(22, 22, 22, 1);
+    border : 2px solid rgba(0, 96, 88, 1);
+    border-radius : 10px;     
+    font-family: "Barlow Condensed", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: rgb(90, 90, 90);
+    text-transform:uppercase;
+    text-decoration: none;
+}
