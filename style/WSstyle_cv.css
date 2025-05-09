@@ -1,9 +1,4 @@
-/***** GENERAL - PAGE EN COURS D'AFFICHAGE *****/
-
-#pageActuelle a {
-    text-decoration: underline;
-}
-/***** SECTION JEUX PAR GRID *****/
+/***** PC GRID *****/
 
 .cvGrid {
     
@@ -21,11 +16,11 @@
     padding: 10px 10px 10px 10px; 
     display: flex;
     justify-content: center;
-    align-items : flex-end; 
+    align-items : flex-end;         
 }
 .portrait img {
-    width: 90%;
-    height:90%;
+    width: 95%;
+    height:95%;
     object-fit: cover;   
 }
 
@@ -52,7 +47,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 25px;
     
 }
 .Name h2{
@@ -77,4 +71,61 @@
     padding-left: 20px ;
     padding-right: 30px; 
     padding-bottom: 30px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1250px)
+{
+    /*GRID CV*/
+    .cvGrid 
+    {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: justify;
+    }
+    
+    .Name {
+        order: 1; 
+        text-align: center
+    } 
+
+    .portrait {
+        order : 2; 
+    }
+    .portrait img {
+        max-height: 250px;
+        object-fit : contain; 
+    }
+
+    .infos {
+        order: 3; 
+    }
+
+    .experiencesCV{
+        order: 4; 
+    }
+
+    .formation_academiqueCV {
+        order: 5; 
+    }
+
+    .title_year {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .years {
+        display: flex;
+        justify-content: flex-end;
+        padding-top : 2%;
+    }
+
+    .logiciels_competencesCV {
+        order: 6; 
+    }
+
+    .langues_loisirsCV {
+        order: 7; 
+    }
+
 }
