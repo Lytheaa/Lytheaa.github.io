@@ -28,21 +28,24 @@
 </header>
 
 <body>
-<nav>
-<div class="navbar">
-    <div id="logoNavBar"><p>Pauline Pacé</p></div>  
-    <ul class="navList">
-        <li> <a href="index.html">CV</a></li> 
-        <li id="pageActuelle"> <a href="portfolio.html">Mon portfolio</a></li> 
-        <li>  <a href="contact.html">Contact</a></li> 
-    </ul>
-    <div class="socials">
-        <a target="LinkedinWindow" href="https://www.linkedin.com/in/pauline-pace-4a2717242/"> <img src="Img/icon_linkedin_grey_circle_50px.png" alt="Page Linkedin" title="Logo Linkedin"/></a>
-        <a target="Itch.ioWindow" href="https://lytheaa.itch.io/"> <img src="Img/icon_itchio_grey_circle_50px.png" alt="Page Itch.io" title="Page Itch.io"/></a>
-        <a href=”mailto:pauline.pace97@gmail.com”> <img src= "Img/icon_email_grey_circle_50px.png" alt="Send Email" title="Email"/></a>
-    </div>
-</div> 
-</nav>
+    <nav>
+        <div class="navbar">
+            <div id="logoNavBar"><p>Pauline Pacé</p></div> 
+            
+            <ul class="navList">
+                <li id="pageActuelle"> <a href="index.html">CV</a></li> 
+                <li> <a href="portfolio.html">Mon portfolio</a></li> 
+                <li>  <a href="contact.html">Contact</a></li>         
+                <div class="socials">
+                    <a target="LinkedinWindow" href="https://www.linkedin.com/in/pauline-pace-4a2717242/"> <img src="Img/icon_linkedin_grey_circle_50px.png" alt="Page Linkedin" title="Logo Linkedin"/></a>
+                    <a target="Itch.ioWindow" href="https://lytheaa.itch.io/"> <img src="Img/icon_itchio_grey_circle_50px.png" alt="Page Itch.io" title="Page Itch.io"/></a>
+                    <a href=”mailto:pauline.pace97@gmail.com”> <img src= "Img/icon_email_grey_circle_50px.png" alt="Send Email" title="Email"/></a>
+                </div>
+            </ul>
+            <label id ="burger">☰</label>
+            
+        </div> 
+        </nav>
 
 <main> 
     
@@ -171,5 +174,13 @@
 
 </footer>
 
+<script> 
+    const menuBurger = document.querySelector("#burger")
+    const navList = document.querySelector(".navList")
+
+    menuBurger.addEventListener('click',()=>{
+    navList.classList.toggle('mobile-menu')
+    })
+</script> 
 </body>
 </html>
