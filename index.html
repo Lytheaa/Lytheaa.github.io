@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> Mes réalisations </title>
 </head>
 
@@ -31,16 +33,19 @@
 <nav>
 <div class="navbar">
     <div id="logoNavBar"><p>Pauline Pacé</p></div> 
+    
     <ul class="navList">
         <li id="pageActuelle"> <a href="index.html">CV</a></li> 
         <li> <a href="portfolio.html">Mon portfolio</a></li> 
-        <li>  <a href="contact.html">Contact</a></li> 
+        <li>  <a href="contact.html">Contact</a></li>         
+        <div class="socials">
+            <a target="LinkedinWindow" href="https://www.linkedin.com/in/pauline-pace-4a2717242/"> <img src="Img/icon_linkedin_grey_circle_50px.png" alt="Page Linkedin" title="Logo Linkedin"/></a>
+            <a target="Itch.ioWindow" href="https://lytheaa.itch.io/"> <img src="Img/icon_itchio_grey_circle_50px.png" alt="Page Itch.io" title="Page Itch.io"/></a>
+            <a href=”mailto:pauline.pace97@gmail.com”> <img src= "Img/icon_email_grey_circle_50px.png" alt="Send Email" title="Email"/></a>
+        </div>
     </ul>
-    <div class="socials">
-        <a target="LinkedinWindow" href="https://www.linkedin.com/in/pauline-pace-4a2717242/"> <img src="Img/icon_linkedin_grey_circle_50px.png" alt="Page Linkedin" title="Logo Linkedin"/></a>
-        <a target="Itch.ioWindow" href="https://lytheaa.itch.io/"> <img src="Img/icon_itchio_grey_circle_50px.png" alt="Page Itch.io" title="Page Itch.io"/></a>
-        <a href=”mailto:pauline.pace97@gmail.com”> <img src= "Img/icon_email_grey_circle_50px.png" alt="Send Email" title="Email"/></a>
-    </div>
+    <label id ="burger">☰</label>
+    
 </div> 
 </nav>
 
@@ -201,4 +206,13 @@
 </footer>
 
 </body>
+<script> 
+        const menuBurger = document.querySelector("#burger")
+        const navList = document.querySelector(".navList")
+ 
+        menuBurger.addEventListener('click',()=>{
+        navList.classList.toggle('mobile-menu')
+        })
+</script> 
+
 </html>
