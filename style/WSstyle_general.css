@@ -5,8 +5,32 @@
     background-color: rgba(22, 22, 22, 1); 
 }
 
+
+/***** GENERAL - PAGE EN COURS D'AFFICHAGE *****/
+
+ #pageActuelle a {
+    color: rgb(175, 174, 174); 
+
+}
+
+
 /*****SECTION BARRE DE NAVIGATION ****/
 
+/* MENU BURGER */
+
+#burger {
+    display:none;
+    position: absolute;
+    right : 5%; 
+
+    color : whitesmoke;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer; 
+    
+}
+
+/* NAVBAR GENERAL */
 .navbar {
     z-index : 1;
     background-color: rgb(0, 0, 0);
@@ -26,7 +50,7 @@
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: row;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     
 }
 
@@ -36,30 +60,29 @@
     font-style: normal;
     text-transform:uppercase;
     color: rgba(0, 96, 88, 1);
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     text-decoration: none;
     font-size: 1.8rem;
     
     width : 100%
 }
 #logoNavBar img {
-    background-color:  rgb(0, 0, 0);
+    background-color:  transparent;
     width: 10%;
 }
 
 .navList {
-    margin-right: 50px;
     display: flex;
     list-style: none;
     gap:30px;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
 }
 
 .navList li {
     background-color: transparent;
 }
 .navList li a {
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     text-decoration: none;
     font-size: 1.5rem;
     font-family: "Barlow Condensed", serif;
@@ -72,6 +95,7 @@
 .socials {
     display: flex;
     flex-wrap: nowrap;
+    background-color: transparent;
     
 }
 .socials a {
@@ -79,14 +103,15 @@
 }
 .socials img {
     display: flex;
-    justify-content: flex end;
+    justify-content: flex-end;
     padding: 0 5px 0 5px ;
     width: 30px;
     height: 30px;
     object-fit: contain;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
 
 }
+
 
 /*****SECTION MAIN  ****/
 
@@ -154,4 +179,74 @@ justify-content: space-between;
     background-color: rgb(0, 0, 0);
     font-size: 1rem;
     color: rgb(32, 32, 32);
+}
+
+
+/*RESPONSIVE*/
+
+/*BARRE DE NAVIGATION */
+
+@media screen and (max-width: 900px)
+{
+
+#burger {
+    display: block; 
+}
+
+.navbar #logoNavBar {
+
+    position: absolute; 
+    left : 5%; 
+}
+
+ .navList {
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(7px); 
+    width: 100%;
+    height: 100vh;
+    top: 0; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:-200%;
+    transition: all 0.5s ease; 
+}
+
+.mobile-menu {
+    margin-left:0;
+}
+
+.navList li {
+    text-align: center;
+    margin-top: 30px;
+    
+}
+
+.navList li a {
+    font-size: 1.8rem;
+}
+.navList .socials {
+    margin-top: 30px;
+} 
+
+/*GENERAL */
+
+main{
+    padding: 0px 0px 0px 0px;
+
+}
+
+/*FOOTER */
+
+.footerList {
+    display: none;
+}
+
+.footerZone .socials{
+    display: none;
+}
+
 }
