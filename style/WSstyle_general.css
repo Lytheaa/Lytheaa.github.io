@@ -2,15 +2,16 @@
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     padding: 0;
     margin: 0;
-    background-color: rgba(22, 22, 22, 1); 
 }
 
+body {
+    background-color: rgba(22, 22, 22, 1);
+}
 
 /***** GENERAL - PAGE EN COURS D'AFFICHAGE *****/
 
  #pageActuelle a {
     color: rgb(175, 174, 174); 
-
 }
 
 
@@ -22,7 +23,6 @@
     display:none;
     position: absolute;
     right : 5%; 
-
     color : whitesmoke;
     font-size: 2rem;
     background-color: transparent;
@@ -34,21 +34,21 @@
 .navbar {
     z-index : 1;
     background-color: rgb(0, 0, 0);
-
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     position:fixed; 
     width: 100%;
     height: 7%;
     top:0; 
 }
+
 #logoNavBar {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    margin-left: 10%;
     flex-direction: row;
     background-color: transparent;
     
@@ -62,10 +62,9 @@
     color: rgba(0, 96, 88, 1);
     background-color: transparent;
     text-decoration: none;
-    font-size: 1.8rem;
-    
-    width : 100%
+    font-size: 1.8rem;    
 }
+
 #logoNavBar img {
     background-color:  transparent;
     width: 10%;
@@ -76,6 +75,8 @@
     list-style: none;
     gap:30px;
     background-color: transparent;
+    margin-right: 10%;
+    
 }
 
 .navList li {
@@ -96,6 +97,7 @@
     display: flex;
     flex-wrap: nowrap;
     background-color: transparent;
+    ;
     
 }
 .socials a {
@@ -116,10 +118,9 @@
 /*****SECTION MAIN  ****/
 
 main {
-    padding: 60px 0px 0px 0px;
-    margin : auto 10% 5% 10%;
-    height : auto;
-    
+    padding-top: 7%;
+    margin : 0 10% 3% 10%;
+    height : auto;    
 }
 
 h1 {
@@ -129,7 +130,7 @@ h1 {
     text-transform:uppercase;
     font-size: 2.5rem;
     color: rgba(0, 96, 88, 1);
-    margin: 50px 0px 30px 0px;
+    padding-bottom: 25px;
 }
 
 /***** SECTION FOOTER *****/
@@ -186,23 +187,30 @@ justify-content: space-between;
 
 /*BARRE DE NAVIGATION */
 
-@media screen and (max-width: 900px)
+@media screen and (max-width: 1000px)
 {
+
+
 
 #burger {
     display: block; 
 }
+.navbar{
+    height: 7%;
+}
 
 .navbar #logoNavBar {
-
     position: absolute; 
-    left : 5%; 
+    margin-left: 6%;
+}
+#logoNavBar p {
+    font-size: 2rem;
 }
 
  .navList {
     position: absolute;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: rgba(0, 0, 0, 0.795);
     backdrop-filter: blur(7px); 
     width: 100%;
     height: 100vh;
@@ -211,7 +219,7 @@ justify-content: space-between;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:-200%;
+    margin-left:-100%;
     transition: all 0.5s ease; 
 }
 
@@ -235,8 +243,7 @@ justify-content: space-between;
 /*GENERAL */
 
 main{
-    padding: 0px 0px 0px 0px;
-
+    margin-top: 10%;
 }
 
 /*FOOTER */
