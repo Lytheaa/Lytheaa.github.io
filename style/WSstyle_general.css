@@ -196,7 +196,7 @@ justify-content: space-between;
     display: block; 
 }
 .navbar{
-    height: 7%;
+    height: 8%;
 }
 
 .navbar #logoNavBar {
@@ -204,7 +204,7 @@ justify-content: space-between;
     margin-left: 6%;
 }
 #logoNavBar p {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
  .navList {
