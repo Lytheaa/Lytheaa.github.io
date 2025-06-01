@@ -1,0 +1,103 @@
+/* main {
+  border: 1px solid blue;
+} */
+
+.indexPage {
+  display: flex;
+  flex-direction: column;
+}
+.titleIndexPage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+
+  margin-top: 30vh;
+
+}
+.titleIndexPage h1 {
+  font-size: 10vh;
+  color: rgb(122, 225, 235) ;
+  text-shadow: 
+  0 0 6px rgba(203, 248, 247, 0.92),
+  0 0 30px rgba(202,228,225,0.34),
+  0 0 12px rgba(26,160,172,0.52),
+  0 0 21px rgba(26,160,172,0.92),
+  0 0 34px rgba(26,160,172,0.78),
+  0 0 54px rgba(26,160,172,0.92);
+  
+  animation-duration: 5s;
+  animation-name: fondu;
+  animation-iteration-count: 1;
+
+} 
+
+.indexButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  animation-duration: 5s;
+  animation-name: fondu;
+  animation-iteration-count: 1;
+
+  margin-top: 10vh;
+
+}
+
+
+footer {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 800px)
+{ 
+
+  .titleIndexPage {
+    margin-top: 20vh;
+  }
+
+.indexButtons {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center ;
+
+  gap: 4vh;
+}
+}
+
+/*ANIMATIONS */
+
+@keyframes fondu {
+  from{
+    opacity: 0;
+  }
+
+  to {
+    opacity:1; 
+  }
+}
+
+
+/* @keyframes flash {
+
+  0%,  20%, 34%, 41% {
+  {
+    box-shadow: none;
+  }
+
+} */
+/* @keyframes slideRight {
+
+  from {
+    margin-left:-100vw;
+  }
+
+  to {
+    margin-left:0;
+  }
+} */

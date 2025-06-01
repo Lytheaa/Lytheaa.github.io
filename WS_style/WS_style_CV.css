@@ -1,0 +1,154 @@
+/*CVGRID - GENERAL*/
+.cvGrid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5vh;
+}
+
+.enTeteCvGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: 1px solid blue;  */
+    grid-column: 1/3;
+}
+
+#portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue;  */
+    max-width: 15vw;
+}
+
+#portrait img {
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.titleCvGrid {
+    padding-left: 2vw;
+}
+
+.titleYear{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+
+}
+
+.place {
+    margin-bottom: 1vh;
+}
+
+#galerieSpecialCvGrid{
+    margin-top:0;
+}
+
+
+/*CVGRID - TEXTES */ 
+
+#Name {
+    text-transform: uppercase;
+}
+
+#Work {
+    font-size: 3vh;
+}
+
+.cvGrid h2 {
+    font-size: 2.5vh;
+    border-bottom: 1px solid rgb(90, 90, 90) ;
+    padding-bottom: 0.5vh;
+    margin-bottom: 1vh;
+    margin-top:1vh;
+}
+
+.cvGrid p {
+    text-align: justify;
+    font-size: 1.6vh;
+    line-height: 2.1vh;
+
+}
+
+.resumeCvGrid {
+    grid-column: 1/3;
+}
+
+.cvGrid li {
+    font-size: 1.6vh;
+    line-height: 2.1vh;
+    list-style: inside;
+}
+
+/* VERSION RESPONSIVE */ 
+@media screen and (max-width: 1000px)
+{
+.cvGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.enTeteCvGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#portrait {
+    max-width: 30vw;
+}
+
+.titleCvGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logicielsCompetencesCvGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5vw;
+}
+
+.languesLoisirsCvGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5vw;
+}
+
+
+
+
+/*VERSION RESPONSIVE ORDER */
+
+.enTeteCvGrid{
+    order:1; 
+}
+
+.resumeCvGrid {
+    order:2; 
+}
+
+.experiencesCvGrid {
+    order:3; 
+}
+
+.formationCvGrid {
+    order:4; 
+}
+.logicielsCompetencesCvGrid{
+order:5;
+}
+
+.languesLoisirsCvGrid {
+    order:6;
+}
+
+
+
+}

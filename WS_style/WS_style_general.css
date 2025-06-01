@@ -1,0 +1,442 @@
+/*PARAMETRES GENERAUX*/
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;;
+    color: rgb(148, 148, 148); 
+    padding: 0;
+    margin: 0;    
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    /* font-family: "Barlow Condensed", serif;
+    font-weight: 500; */
+
+    /* font-family: "Goldman", sans-serif;
+    font-weight: 200;
+    font-style: normal; */
+    /* letter-spacing: -1px; */
+
+    font-family: "Genos", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 4vh;
+    color: #1aa0ac;
+    
+}
+
+h2 {
+    
+    /* font-family: "Goldman", sans-serif;
+    font-weight: 200;
+    font-style: normal; */
+
+    font-family: "Genos", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+    /* font-family: "Barlow Condensed", serif;
+    text-transform:uppercase ;
+    font-weight: 500; */
+    color: #1aa0ac;
+    font-weight: 500;
+    font-size: 3vh;
+}
+
+h3 {
+    font-size: 1.6vh;
+}
+
+
+p {
+    font-size: 1.6vh;
+    
+}
+
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+/* POLICES - GENERAL RESPONSIVE */ 
+
+@media screen and (max-width: 900px)
+{ 
+
+    p {
+        font-size: 2.2vh;
+    }
+
+ }
+
+
+/* MAIN - PARAMETRES GENERAUX : PC */
+
+main {
+margin: 10vh 20vw 10vh 20vw;
+}
+
+/* MAIN - PARAMETRES GENERAUX : RESPONSIVE */
+
+@media screen and (max-width: 900px)
+{    
+    main {
+    margin: 10vh 8vw 10vh 8vw;
+}
+
+}
+
+/*BARRE DE NAVIGATION : AFFICHAGE PC*/
+
+nav {
+    width: 100vw;
+    height: 8vh;
+    background-color: black ;
+
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+#navBar {
+    height: inherit;
+    margin: 0vw 5vw 0vw 5vw; 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navLogo {
+    font-size: 4vh;
+    color: rgb(26, 160, 172);
+
+    /* font-family: "Goldman", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: -1px;
+     */
+
+       /* font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal; */
+  /* font-variation-settings:
+    "wdth" 100; */
+
+    font-family: "Genos", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+        letter-spacing: -1px;
+
+    text-transform:uppercase;
+
+    /* font-family: "Barlow Condensed", serif;
+    font-weight: 500; */
+}
+
+#navLogo:hover {
+
+      /* font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal; */
+
+    color: rgb(122, 225, 235) ;
+    text-shadow: 
+    0 0 6px rgba(203, 248, 247, 0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(26,160,172,0.52),
+    0 0 21px rgba(26,160,172,0.92),
+    0 0 34px rgba(26,160,172,0.78),
+    0 0 54px rgba(26,160,172,0.92);
+        /* text-shadow:0px 0px 10px #1aa0ac; */
+
+}
+
+nav ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.navList {
+    gap : 1.8vw;
+    margin-right: 4vw;
+}
+
+.navList li a {
+    font-family: "Barlow Condensed", serif;
+    font-size: 2.3vh;
+    font-weight: 600;
+    text-transform:uppercase;    
+}
+
+.navList li a:hover {
+    color: rgb(202, 202, 202); 
+}
+
+#pageActuelle a {
+    color: rgb(202, 202, 202); 
+ 
+}
+
+.navSocials {
+    gap: 10px;
+}
+
+.navSocials img {
+    height: 2.6vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+#burger {
+    display: none;
+}
+
+/* BARRE DE NAVIGATION : RESPONSIVE */
+
+@media screen and (max-width: 900px)
+{    
+    #burger {
+        display: block;
+        position: absolute;
+        right: 5vw;
+        
+        color : whitesmoke;
+        font-size: 3.8vh;
+        cursor: pointer;         
+    }
+    
+    .navMenu{
+        top:0;
+        left:0;
+        
+        position : absolute;
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: rgba(0, 0, 0, 0.795);
+        backdrop-filter: blur(7px);
+        
+        width: 100vw;
+        height: 100vh;
+        
+        margin-left: -100vw; 
+        transition: all 0.5s ease; 
+    }
+    .navMenu ol {
+        display: flex;
+        flex-direction: column;
+    }
+    .navList{
+        margin: 0;
+    }
+    
+    .navList li {
+        margin-top: 5vh;
+        
+    }
+    .navList li a {
+        font-size: 8vw;
+    }
+    
+    .navMenu .navSocials {
+        display: flex ;
+        flex-direction: row;
+        margin-top: 15vh;       
+    }
+    
+    .navMenu .navSocials img {
+        height:6vw;
+    }
+    
+    .mobile-menu {
+        margin-left: 0;        
+    }
+
+}
+
+/*FOOTER - PARAMETRES GENERAUX : PC */
+
+footer {
+    position: sticky;
+    width: 100vw;
+    background-color: black;
+    padding: 1vh 0 1vh 0; 
+    
+}
+
+.footerMenu {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5vw 0 5vw;
+}
+
+.footerMenu ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footerList {
+    gap: 10px;
+}
+
+.footerList li a 
+{
+    color: #1aa0ac;
+    font-family: "Barlow Condensed", serif;
+    font-weight: 600;
+    font-size: 1.7vh;
+}
+.footerList li a:hover {
+    color: rgb(175, 174, 174); 
+}
+
+.footerSocials {    
+    gap : 5px
+}
+
+.footerSocials img {
+    display: flex;
+    height: 2.3vh;
+}
+
+.copyrightZone {
+    margin: 1vh 0 0 5vw;
+    font-size: 1.3vh;
+}
+
+
+
+/* FOOTER - RESPONSIVE */
+
+@media screen and (max-width: 800px)
+{ 
+    .footerMenu{
+        display: none;
+    }
+}
+
+
+/* BOUTONS NEONS */
+
+.buttonNeon {
+    /* color: #fff; */
+    /* width: 120px; */
+    width: 12vh;
+
+    height: 4vh;
+    /* padding: 10px 25px; */
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    /* display: inline-block; */
+    font-size: 1.8vh;
+    
+    cursor: pointer;
+    text-transform:uppercase;
+}
+
+
+.btnNeonGameGrid {
+    padding: 0;
+    border: none; 
+}
+
+.btnNeonGameGrid span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: #1aa0ac ;
+    /* font-family: "Barlow Condensed", serif; 
+    font-weight: 500; */
+
+    font-family: "Genos", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btnNeonGameGrid:before,
+.btnNeonGameGrid:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #1aa0ac;
+  box-shadow: 0 0 5px #1aa0ac;
+  transition: all 0.3s ease;
+}
+.btnNeonGameGrid:before{
+   height: 50%;
+   width: 1px;
+}
+.btnNeonGameGrid:after {
+  width: 20%;
+  height: 1px;
+}
+.btnNeonGameGrid:hover:before {
+  height: 100%;
+}
+.btnNeonGameGrid:hover:after {
+  width: 100%;
+}
+.btnNeonGameGrid span:before,
+.btnNeonGameGrid span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #1aa0ac;
+  box-shadow: 0 0 5px #1aa0ac;
+  transition: all 0.3s ease;
+}
+.btnNeonGameGrid span:before {
+  width: 1px;
+  height: 50%;
+}
+.btnNeonGameGrid span:after {
+  height: 1px;
+  width: 20%;
+}
+.btnNeonGameGrid span:hover:before {
+  height: 100%;
+}
+.btnNeonGameGrid span:hover:after {
+  width: 100%;
+}
+
+
+
+

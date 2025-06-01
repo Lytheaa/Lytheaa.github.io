@@ -1,0 +1,208 @@
+/*GENERAL */
+
+.year {
+    display: flex;
+    justify-content: flex-end;
+
+    border-bottom: 1px solid rgba(175, 174, 174, 0.486);  
+}
+
+/*TITLES */
+
+#Shadow {
+    color:rgb(121, 102, 167);
+    text-shadow:0 0 0.3em rgba(88, 58, 158, 0.8);
+
+    font-family: "Freckle Face", serif;
+    font-weight: 400;
+}
+
+#TheLastCan{ 
+    color:rgb(121, 2, 2);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#Auditorium { 
+    color: rgb(33, 33, 175);
+    font-family: "Nova Square", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+#CastleShoot {
+    color: rgb(27, 100, 27);
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*GAME GRID : VERSION PC*/
+
+.gameGrid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 2vh 2vh 2vh 2vh;
+    margin-bottom: 3vh;
+}
+
+.gameGrid:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* border: 0.5px solid rgb(255, 255, 255); */
+}
+
+.gameGrid .firstColumnGameGrid {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+/*GAMEGRID - CAROUSEL  */
+
+.carouselGameGrid {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.buttonCarousel {
+    position: absolute;
+    background: none;
+    border: none; 
+    color: rgba(255, 255, 255, 0.486);
+    font-size: 4vh;
+    z-index: 2;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.buttonCarousel:hover {
+    color:antiquewhite;
+}
+
+.buttonCarousel.previous {
+    left : 5px;
+}
+
+.buttonCarousel.next {
+    right: 5px;
+}
+
+.slideCarousel {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    opacity:0;
+    transition: 0.5s ease-in-out;
+
+
+}
+
+.slideCarousel.active{
+    opacity:1;
+}
+
+.slideCarousel img {
+    display: block;
+    height: 100%;
+    width: 100%;
+     object-fit: contain; 
+    /*object-fit: cover;*/
+     
+
+}
+
+
+/* GAMEGRID - SECOND COLUMN */
+
+.gameGrid .secondColumnGameGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    margin: 1vh 3vw 0 3vw;
+}
+
+.secondColumnGameGrid .titleGameGrid {
+    /* font-size: 10vh; */
+    margin-bottom: 2vh;
+    /* border: 1px solid blue; */
+}
+
+.secondColumnGameGrid .titleGameGrid h2 {
+    font-size: 3vh;
+}
+
+.secondColumnGameGrid .logicielGameGrid {
+    display: flex;
+    justify-content: flex-end;     
+}
+
+.secondColumnGameGrid .logicielGameGrid img{
+    max-height: 2vh;
+}
+
+.secondColumnGameGrid .iconsGameGrid {
+    height: 2vh;
+    padding-right: 1.5vh;
+}
+
+.secondColumnGameGrid .listGameGrid {
+    grid-column: 1/3;
+    line-height: 3vh;
+    margin-bottom: 1.8vh;
+    
+}
+.secondColumnGameGrid .listGameGrid li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 1.5vh;
+}
+
+.gameGrid .secondColumnGameGrid .pitchGameGrid {
+    grid-column: 1/3;
+    text-align: justify;
+    font-size: 1.4vh;
+
+    margin-bottom: 3vh;
+}
+
+.secondColumnGameGrid .containerButtonGameGrid {
+    display: flex;
+    grid-column: 1/3;
+    justify-content: flex-end;
+}
+
+/* GAMEGRID : VERSION RESPONSIVE */
+
+@media screen and (max-width: 1000px)
+{
+     .gameGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    } 
+            
+     .gameGrid .firstColumnGameGrid {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+    }
+    
+     .gameGrid .firstColumnGameGrid .carouselGameGrid{
+        width: 100%;
+        height: 30vh;
+    }
+
+
+  .slideCarousel img {
+     object-fit: contain;
+    }   
+
+}
