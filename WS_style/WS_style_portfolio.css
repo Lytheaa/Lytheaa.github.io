@@ -201,8 +201,11 @@
     }
 
 
-  .slideCarousel img {
+      .slideCarousel img {
      object-fit: contain;
     }   
-
+    
+    .secondColumnGameGrid .listGameGrid li {
+        font-size: 2vh;
+    }
 }
